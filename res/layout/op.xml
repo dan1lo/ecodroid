@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/RelativeLayout01" 
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content" 
+	android:background="#8c8a8c"
+  android:orientation="vertical" >
+	
+	<TextView android:id="@+id/txtBusca" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:text="Digite uma Cidade">
+	</TextView>
+	<EditText 
+		android:layout_below="@+id/TextView01" 
+		android:id="@+id/edt_cidade" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:inputType="text">
+	</EditText>
+	<TextView 
+		android:layout_width="wrap_content" 
+		android:layout_below="@+id/edt_cidade" 
+		android:id="@+id/TextView02" 
+		android:layout_height="wrap_content" 
+		android:text="Escolha o tipo de lixo:">
+	</TextView>
+	<LinearLayout android:id="@+id/RelativeLayout02" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:background="#8c8a8c">
+	<Spinner 
+		android:layout_width="fill_parent" 
+		android:layout_below="@+id/TextView02" 
+		android:id="@+id/Spinner01" 
+		android:layout_weight="3"
+		android:layout_height="wrap_content">
+	</Spinner>
+	<Button 
+		android:layout_width="wrap_content"
+		android:layout_below="@+id/Spinner01" 
+		android:layout_height="wrap_content" 
+		android:text="Olhar no Mapa!"
+		android:layout_weight="2" 
+		android:id="@+id/btn_mandar">
+	</Button>
+	</LinearLayout>
+	<LinearLayout 
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:background="#39c79c"
+    	>
+		<com.google.android.maps.MapView
+     		android:id="@+id/map_view"
+     		android:layout_width="fill_parent"
+     		android:layout_height="fill_parent"
+     		android:enabled="true"
+     		android:clickable="true"
+     		android:apiKey="0YpZEB9n-lRxGRqavkT7wBRD8FxX3Bh4q6WjjOQ"
+		/>
+	</LinearLayout>
+
+</LinearLayout>
+
